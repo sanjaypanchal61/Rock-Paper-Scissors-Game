@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 80%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    background-color: crimson;
+    color: wheat;
+    width: 40%;
+    border-radius: 25px;
+    border: none;
+    font-family: monospace;
+}
+
+.img-container {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 60%;
+    width: 100%;
+}
+#rock,#paper,#scissors{
+    font-size: 5rem;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 5px dotted gray;
+    border-radius: 20%;
+}
+
+.img:hover {
+    border: 5px solid greenyellow;
+    cursor: pointer;
+}
+.result-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div .red {
+    background-color: red;
+}
+
+div .green {
+    background-color: rgb(27, 181, 27);
+    color: white;
+    font-weight: bold;
+}
+
+div .yellow {
+    background-color: yellow;
+    color: black;
+}
+
+div .red, .green, .yellow {
+    height: 5%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.score-container {
+    background-color: rgb(22, 21, 21);
+    padding-right: 30px;
+    height: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.score-board {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: darkkhaki;
+    color: black;
+    border-radius: 25px;
+    width: 9rem;
+    height: 100%;
+    border-right: 5px solid darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#restart-btn{
+    background-color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+    color: white;
+}
+
+#restart-btn:hover{
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+/* mobile media query */
+@media(min-width:320px) and (max-width:599px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    .img-container {
+        gap: 1rem;
+    }
+
+    .img-container img {
+        height: 70px;
+        width: 90px;
+    }
+
+    .img {
+        padding: 0px;
+        border: none;
+    }
+    .img:hover {
+        border:none;
+        cursor: pointer;
+    }
+    div .red,.green,.yellow {
+        height: 5%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .score-container {
+        margin-top: 10px;
+        background-color: rgb(22, 21, 21);
+        flex-direction: column;
+        height: 0px;
+        border-radius: 0px;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgb(68, 64, 64);
+        border-radius: 60px;
+        padding-right: 20px;
+    }
+
+    .score-board {
+        background-color: lightsteelblue;
+        border: 0px;
+        border-radius: 30px;
+        padding: 5px;
+        width: 100%;
+        height: 2rem;
+        margin-left: 20px;
+    }
+}
+
+/* tablet media query */
+@media (min-width:600px) and (max-width:1023px) {
+    .wrapper {
+        padding: 0px;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        width: 70%;
+    }
+
+    .img-container {
+        gap: 1rem;
+    }
+
+    .img {
+        padding: 0.5rem;
+        border: none
+    }
+
+    .img:hover {
+        border: none;
+    }
+    div .red,.green,.yellow {
+        height: 5%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}
